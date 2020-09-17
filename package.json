@@ -5,7 +5,11 @@
     "typescript": "^4.0.2"
   },
   "scripts": {
+    "basicTypes": "tsc basicTypes.ts",
+    "variableDeclarations": "tsc variableDeclarations.ts",
     "compile": "tsc interfaces.ts",
-    "compile": "tsc generics.ts"
+    "generic": "tsc generics.ts",
+    "compil": "tsc enums.ts",
+    "typeInferenece":"tsc typeInference.ts"
   }
 }

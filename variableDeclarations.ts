@@ -1,38 +1,34 @@
 // let a= 5;
-// for (let i = 0; i < 10; i++) {
-//     setTimeout(function () {
-//         console.log(i);
-//     },10 );
-// }
-//
-// for (let i = 0; i < 10; i++) {
-//     // capture the current state of 'i'
-//     // by invoking a function with its current value
-//     (function (i) {
-//         setTimeout(function () {
-//             console.log(i);
-//         }, 100 * i);
-//     })(i);
-// }
-// function foo() {
-//     // okay to capture 'a'
-//     return a;
-// }
-//
-// // illegal call 'foo' before 'a' is declared
-// // runtimes should throw an error here
-// foo();
-//
-// let a;
-//
-// function f(x) {
-//     let x;
-//     let x;
-//
-//     if (true) {
-//         var x;
-//     }
-// }
+for (let i = 0; i < 10; i++) {
+    setTimeout(function () {
+        console.log(i);
+    },10 );
+}
+
+for (let i = 0; i < 10; i++) {
+    // capture the current state of 'i'
+    // by invoking a function with its current value
+    (function (i) {
+        setTimeout(function () {
+            console.log(i);
+        }, 100 * i);
+    })(i);
+}
+function fro() {
+    // okay to capture 'a'
+    return a;
+}
+
+// illegal call 'foo' before 'a' is declared
+// runtimes should throw an error here
+fro();
+
+function f(x) {
+
+    if (true) {
+        var x;
+    }
+}
 function fot(condition, x1) {
     if (condition) {
         let x = 100;
@@ -55,7 +51,7 @@ let o = {
 // let { a1, b1 } = o;
 // console.log(a1);
 
-let { a, b }: { a: string; b: number } = o;
+// let { a, b }: { a: string; b: number } = o;
 console.log(a);
 
 

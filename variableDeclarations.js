@@ -9,37 +9,32 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
+var _loop_1 = function (i) {
+    setTimeout(function () {
+        console.log(i);
+    }, 10);
+};
 // let a= 5;
-// for (let i = 0; i < 10; i++) {
-//     setTimeout(function () {
-//         console.log(i);
-//     },10 );
-// }
-//
-// for (let i = 0; i < 10; i++) {
-//     // capture the current state of 'i'
-//     // by invoking a function with its current value
-//     (function (i) {
-//         setTimeout(function () {
-//             console.log(i);
-//         }, 100 * i);
-//     })(i);
-// }
-// function foo() {
+for (var i = 0; i < 10; i++) {
+    _loop_1(i);
+}
+for (var i = 0; i < 10; i++) {
+    // capture the current state of 'i'
+    // by invoking a function with its current value
+    (function (i) {
+        setTimeout(function () {
+            console.log(i);
+        }, 100 * i);
+    })(i);
+}
+// function fro() {
 //     // okay to capture 'a'
 //     return a;
 // }
-//
-// // illegal call 'foo' before 'a' is declared
-// // runtimes should throw an error here
-// foo();
-//
-// let a;
-//
+// illegal call 'foo' before 'a' is declared
+// runtimes should throw an error here
+// fro();
 // function f(x) {
-//     let x;
-//     let x;
-//
 //     if (true) {
 //         var x;
 //     }
@@ -59,19 +54,42 @@ var first = input[0], second = input[1];
 var o = {
     a: "foo",
     b: 12,
-    c: "bar",
+    c: "bar"
 };
 // let { a1, b1 } = o;
 // console.log(a1);
-var a = o.a, b = o.b;
-console.log(a);
+// let { a, b }: { a: string; b: number } = o;
+// console.log(a);
 function keepWholeObject(wholeObject) {
     var _a = wholeObject.a, a = _a === void 0 ? 56 : _a, _b = wholeObject.b, b = _b === void 0 ? 1001 : _b;
 }
 // function f({ a, b }: C): void {
 // }
-var c = { a: "dhgsd", b: 65, };
+// let c:C={a:"dhgsd",b:65,};
 var defaults = { food: "spicy", price: "$$", ambiance: "noisy" };
 var search = __assign(__assign({}, defaults), { food: "rich" });
 console.log(typeof search);
-//# sourceMappingURL=variableDeclarations.js.map
+
+class Person {
+    protected name: string;
+    constructor(name: string) {
+        this.name = name;
+    }
+}
+
+class Employee extends Person {
+    private department: string;
+
+    constructor(name: string, department: string) {
+        super(name);
+        this.department = department;
+    }
+
+    public getElevatorPitch() {
+        return `Hello, my name is ${this.name} and I work in ${this.department}.`;
+    }
+}
+
+let howard = new Employee("Howard", "Sales");
+console.log(howard.getElevatorPitch());
+console.log(howard.name);

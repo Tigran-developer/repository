@@ -37,6 +37,9 @@ enum City {
     Moscov,
     NewYork,
 }
+
+console.log(Object.keys(City));
+console.log(Object.values(City));
 let ourCapitalCityNumber:City=City.Erevan;
 let ourCapitalCityName:string=City[1];
 //console.log(ourCapitalCityName);
@@ -54,8 +57,8 @@ let num:number=14.56854521;
 let number:unknown=num.toFixed(2);
 console.log(typeof number);
 
-let dec:number =undefined;
-console.log(typeof dec);
+// let dec:number =undefined;
+// console.log(typeof dec);
 let metr:number = 16;
 
 function error(): never {
@@ -82,6 +85,12 @@ function infiniteRec(): void {
     return infiniteRec();
 }
 
-// infiniteLoop();
-let n:never;
-console.log(typeof n);
+// // infiniteLoop();
+// let n:never;
+// console.log(typeof n);
+declare const maybe: unknown;
+// 'maybe' could be a string, object, boolean, undefined, or other types
+const aNumber: void = undefined;
+let m:any=null;
+let numbers:any
+console.log((numbers as string).length);

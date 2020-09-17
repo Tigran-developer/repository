@@ -32,6 +32,8 @@ var City;
     City[City["Moscov"] = 1] = "Moscov";
     City[City["NewYork"] = 2] = "NewYork";
 })(City || (City = {}));
+console.log(Object.keys(City));
+console.log(Object["values"](City));
 var ourCapitalCityNumber = City.Erevan;
 var ourCapitalCityName = City[1];
 //console.log(ourCapitalCityName);
@@ -46,8 +48,8 @@ console.log(future === true);
 var num = 14.56854521;
 var number = num.toFixed(2);
 console.log(typeof number);
-var dec = undefined;
-console.log(typeof dec);
+// let dec:number =undefined;
+// console.log(typeof dec);
 var metr = 16;
 function error() {
     throw new Error("");
@@ -68,7 +70,6 @@ console.log(typeof strictlyTyped);
 function infiniteRec() {
     return infiniteRec();
 }
-// infiniteLoop();
-var n;
-console.log(typeof n);
-//# sourceMappingURL=basicTypes.js.map
+// // infiniteLoop();
+// let n:never;
+// console.log(typeof n);
