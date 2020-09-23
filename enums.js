@@ -1,26 +1,27 @@
 var Direction;
 (function (Direction) {
     Direction[Direction["Up"] = 1] = "Up";
-    Direction[Direction["Down"] = 2] = "Down";
-    Direction[Direction["Left"] = 3] = "Left";
-    Direction[Direction["Right"] = 4] = "Right";
+    Direction[Direction["Down"] = 10] = "Down";
+    Direction[Direction["Left"] = 11] = "Left";
+    Direction[Direction["Right"] = 12] = "Right";
 })(Direction || (Direction = {}));
 console.log(Direction.Down);
 console.log(Direction[1]);
+var alinko = 51;
 var DefoltEnum;
 (function (DefoltEnum) {
-    DefoltEnum[DefoltEnum["Up"] = 0] = "Up";
-    DefoltEnum[DefoltEnum["Down"] = 1] = "Down";
-    DefoltEnum[DefoltEnum["Left"] = 2] = "Left";
-    DefoltEnum[DefoltEnum["Right"] = 3] = "Right";
+    DefoltEnum[DefoltEnum["Up"] = alinko] = "Up";
+    // Down,
+    // Left,
+    // Right
 })(DefoltEnum || (DefoltEnum = {}));
 console.log(DefoltEnum.Up);
-function f() {
+function flh() {
     return 5;
 }
 var E;
 (function (E) {
-    E[E["A"] = f()] = "A";
+    E[E["A"] = flh()] = "A";
     E[E["B"] = 5] = "B";
 })(E || (E = {}));
 // DefoltEnum.Down=5;  Error
@@ -55,3 +56,15 @@ console.log(1 /* "Up" */);
 var r;
 r = ["hvbds", 45, true, "BVH"];
 console.log(r.length);
+var Status;
+(function (Status) {
+    Status[Status["one"] = 0] = "one";
+    Status[Status["two"] = 1] = "two";
+})(Status || (Status = {}));
+var Color;
+(function (Color) {
+    Color[Color["yellow"] = 0] = "yellow";
+    Color[Color["green"] = 1] = "green";
+    Color[Color["blue"] = 2] = "blue";
+})(Color || (Color = {}));
+var ms = Status.one;

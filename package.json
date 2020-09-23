@@ -7,9 +7,12 @@
   "scripts": {
     "basicTypes": "tsc basicTypes.ts",
     "variableDeclarations": "tsc variableDeclarations.ts",
+    "interfaces": "tsc interfaces.ts",
     "compile": "tsc interfaces.ts",
     "generic": "tsc generics.ts",
-    "compil": "tsc enums.ts",
-    "typeInferenece":"tsc typeInference.ts"
+    "enums": "tsc enums.ts",
+    "typeInferenece":"tsc typeInference.ts",
+    "advancedTypes":"tsc advancedTypes.ts",
+    "promis": "tsc promis.ts"
   }
 }

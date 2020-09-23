@@ -1,5 +1,5 @@
-// var xy = [0, 1, null];
-// console.log(typeof xy);
+var xy = [0, 1, null];
+console.log(typeof xy);
 // var xz;
 // var t = { name: "Name", lastName: "Surname" };
 // xz = t;

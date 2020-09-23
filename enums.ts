@@ -1,29 +1,29 @@
 enum Direction {
     Up = 1,
-    Down,
+    Down=10,
     Left,
     Right
 }
 
 console.log(Direction.Down);
 console.log(Direction[1]);
-
+let alinko=51;
 enum DefoltEnum {
-    Up,
-    Down,
-    Left,
-    Right
+    Up=alinko,
+    // Down,
+    // Left,
+    // Right
 }
 
 console.log(DefoltEnum.Up);
 
-function f() {
+function flh() {
 
     return 5
 }
 
 enum E {
-    A = f(),
+    A = flh(),
     B = 5
 }
 
@@ -79,9 +79,5 @@ enum Status {
     two
 }
 
-enum Color {
-    yellow,
-    green,
-    blue
-}
+
 let ms=Status.one;

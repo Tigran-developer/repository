@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let names = ['iliakan', 'remy', 'jeresig'];
+    let requests = names.map((name) => {
+        return fetch(`https://api.github.com/users/${name}`)
+    });
+    console.log(Array.isArray(requests));
+</script>
+</body>
+</html>

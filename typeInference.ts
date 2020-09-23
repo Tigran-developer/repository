@@ -35,4 +35,3 @@ interface NoEmpty<T> {
 }
 let xyl: NotEmpty<number>;
 let y: NoEmpty<number>;
-y=xyl;
